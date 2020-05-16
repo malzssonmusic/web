@@ -1,0 +1,486 @@
+/*Defaults*/ 
+@font-face {
+    font-family: 'inconsolata';
+    src: url('files/inconsolata.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0px;
+    height: 100%;
+    color: #555;
+    font-family: 'inconsolata';
+    font-size: 15px;
+    line-height: 18px;
+    overflow: visible;
+}
+
+h1 {
+    /*margin-top: 20px;
+    margin-bottom: 20px;*/
+    margin-left: 10px;
+    font-size: 33px;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+a {
+    font-family: 'Segoe UI';
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/*Header*/
+/*div {
+    min-height:120px;
+    line-height:75px;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size: 17px;  
+}*/
+
+.inner {
+    width:50%;
+    max-width:0 auto;
+    margin:0 auto;
+}
+
+.header {
+    background:#fafafa;
+    min-height: 100px;
+    border: none; 
+}
+
+.header .inner {
+    /*background:lightgrey; /* remove this for full color bar */
+    color:black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*img*/
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*img:hover {
+    opacity: .5;
+}*/
+
+.logo { /*untuk logo*/
+    height: 50px;
+    width: 220px;
+    /*margin-right: 60px;
+    margin-left: 60px;
+    margin-top: 30px;*/
+    position: absolute;
+}
+
+.portrait {
+    height: 80px;
+    width: 30px;
+}
+
+.square {
+    height: 75px;
+    width: 75px;
+}
+
+/*home menu*/
+figure{
+    margin:30px;
+    padding: 0;
+}
+
+nav{
+    height: 60px;
+    width: 400px;
+    margin:0 auto;
+    padding-top: 25px;
+}
+
+ul{
+    margin left: 0px;
+    margin-right: 0px;
+    margin:0;
+    /*padding:0;*/
+    color:black;
+    position: center;
+    height: 60px;
+    margin-top: 30px;
+    padding-left: 0px;
+}
+
+li{
+    margin left: 0;
+    margin-right: 0;
+}
+.topnav {
+    display: flex;
+    flex: 1;
+    /*height: 85px;*/
+}
+
+.topnav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.topnav ul li{
+    list-style: none;
+    color:black;
+}
+.topnav a {
+    float: center;
+    color: black;
+    text-align: center;
+    padding: 1px 16px;
+    text-decoration: none;
+    font-family: 'Swis721 BlkCn BT';
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    /*background-color: #8bb0da;*/
+    color: #54a0ba;
+}
+
+.topnav a.active {
+    /*background-color: #5188c8;*/
+    color: black;
+}
+
+@media screen and (max-width: 780px) {
+.topnav ul li:not(:last-child){display: none;}
+}
+
+/*Animated Dropdown menu*/
+.big{
+    /*width:100%;
+    height: 100%;*/
+    padding-right: 230px;
+    min-height: 80px;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  margin:0px;
+  padding-right: 30px;
+  padding-bottom:24px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.contbtn{
+border: none;
+  cursor: pointer;
+}
+
+.contbtn:hover, .contbtn:focus{
+    background-color: #2980B9;
+}
+
+.container-content{
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0, 0.93);
+    right:0px;
+    margin-top:100px;
+    width:100%; 
+    line-height: 75px;
+    padding:0px;
+    top:0px;
+}
+
+.container-content a{
+  color: white;
+  /*padding: 12px 16px;*/
+  text-decoration: none;
+  display: block;
+  font-size: 50px;
+  float: right;
+  text-align: left;
+}
+
+.show {
+    display: block;
+    height: 100%;
+    z-index:1;
+}
+
+/*Social Links*/
+table{
+   color: red;
+   border-collapse: collapse;
+}
+tr{
+width: 40px;
+  height: 40px;
+}
+td, th {
+  /*border: 4px solid #dddddd;*/
+  text-align: center;
+  /*padding: 8px;*/
+}
+
+th:hover{
+opacity: .5;
+}
+
+/*Slider*/
+.mySlides {display: none}
+
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 100%;
+  /*position: relative;*/
+  margin: auto;
+}
+
+.big2{
+    /*width:100%;
+    height: 100%;*/
+    padding-right: 230px;
+    min-height: 80px;
+}
+
+/* Next & previous buttons*/ 
+/*.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #8291ec;
+  opacity: .5;
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 4vw;
+  transition: 0.6s ease;
+  user-select: none;
+  /*background-color: rgba(0,0,0,0.8);*/
+}
+
+
+/*Position the "next button" to the right*/ 
+/*.next {
+  right: 0;
+  /*border-radius: 3px 0 0 3px;*/
+}
+
+/* On hover, add a black background color with a little bit see-through*/
+/*.prev:hover, .next:hover {
+  /*background-color: rgba(0,0,0,0.8);*/
+  /*opacity: .5;*/
+  /*color:white;
+
+}
+
+/* Caption text*/ 
+.text {
+  color: red;
+  font-size: 15px;
+  padding: 13px 12px;
+  position: absolute;
+    bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/*Number text (1/3 etc)*/
+.numbertext {
+  color: red;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  /*top: 0;*/
+}
+
+/* The dots/bullets/indicators*/
+.dotcontainer{
+    display: none;
+  margin: 10px auto;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  opacity: .5;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}*/
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*Content*/
+.rowheader{
+background: #fafafa;
+min-height: 100px;
+border:none;
+}
+
+.rowheader-caption{
+    width:500px;
+    height:50px;
+    margin:0 auto;
+    padding-top: 25px;
+}
+
+/* Container for flexboxes */
+section {
+    overflow-y: scroll;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Footer*/
+.end{
+    background-color: #fafafa;
+   color: white;
+   height: 150px;
+   /*left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;*/
+}
+
+.footersocontainer{
+  height: 50px;
+}
+
+.bottomnav {
+    display: flex;
+    flex: 1;
+    height: 0px;
+    padding-top: 0;
+    /*height: 85px;*/
+}
+
+.bottomnav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.bottomnav ul li{
+    list-style: none;
+    color:black;
+}
+.bottomnav a {
+    float: center;
+    color: black;
+    text-align: center;
+    padding: 1px 16px;
+    text-decoration: none;
+    font-family: 'Swis721 BlkCn BT';
+    font-size: 17px;
+}
+
+.bottomnav a:hover {
+    /*background-color: #8bb0da;*/
+    color: blue;
+}
+
+.bottomnav a.active {
+    /*background-color: #5188c8;*/
+    color: black;
+}
+
